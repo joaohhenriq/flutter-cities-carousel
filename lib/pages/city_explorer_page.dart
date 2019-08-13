@@ -35,8 +35,8 @@ class _CityExplorerPageState extends State<CityExplorerPage> {
 
   @override
   void dispose() {
-    super.dispose();
     _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -64,7 +64,7 @@ class _CityExplorerPageState extends State<CityExplorerPage> {
         double value = 1;
         if(_pageController.position.haveDimensions){
           value = _pageController.page - index;
-          value = (1 - (value.abs() * 0.5)).clamp(0.0, 1.0);
+          value = (1 - (value.abs() * 0.1)).clamp(0.0, 1.0);
           return Align(
             alignment: Alignment.topCenter,
             child: Container(
